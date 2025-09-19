@@ -1,0 +1,61 @@
+# Enhanced CrewAI Pipeline - .gitignore
+
+# Environment variables and secrets
+.env
+.replit
+replit.nix
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+
+# Ticket tracking data files
+ticket_tracking.json
+processing_history.json
+workflow_summary.json
+processed_tickets.json
+
+# Backup files
+*.backup_*
+*.bak
+
+# Logs
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.temp
