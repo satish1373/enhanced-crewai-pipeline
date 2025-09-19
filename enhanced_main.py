@@ -8,6 +8,9 @@ import os
 import time
 import json
 from datetime import datetime
+from code_storage_system import CodeStorageManager
+
+code_storage = CodeStorageManager("generated_solutions")
 
 # Fix the import error - remove the problematic import
 try:
@@ -111,7 +114,7 @@ def detect_primary_language(text):
     return max(scores.items(), key=lambda x: x[1])[0] if scores else 'general'
 
 def process_single_ticket(ticket):
-    """Enhanced single ticket processing with tracking"""
+    """Enhanced single ticket processing with comprehensive storage"""
     ticket_key = ticket.key
     
     try:
@@ -130,39 +133,189 @@ def process_single_ticket(ticket):
         print(f"🔄 Processing {ticket_key}: {title}")
         print(f"📊 Detected: {detected_info['language']} | {detected_info['domain']}")
         
-        # Simulate processing (replace with your CrewAI logic)
-        print(f"🤖 Processing with {detected_info['language']} specialist...")
-        time.sleep(2)  # Simulate work
+        # Process with CrewAI (your existing logic)
+        start_time = time.time()
         
-        # Simulate successful result
-        result = f"Solution for {title} using {detected_info['language']}"
+        # Create appropriate task based on detected language
+        language = detected_info['language'].lower()
+        
+        if language == 'python':
+            agent = python_dev_agent
+            task_description = f"""
+            Develop a Python solution for: {title}
+            
+            Requirements: {description}
+            
+            Please provide:
+            1. Complete Python code with proper structure
+            2. Requirements.txt file
+            3. Unit tests
+            4. Documentation
+            5. Usage examples
+            """
+        elif language == 'javascript':
+            agent = js_dev_agent  
+            task_description = f"""
+            Develop a JavaScript/Node.js solution for: {title}
+            
+            Requirements: {description}
+            
+            Please provide:
+            1. Complete JavaScript/TypeScript code
+            2. Package.json configuration
+            3. Test cases
+            4. Documentation
+            5. Usage examples
+            """
+        elif language == 'java':
+            agent = java_dev_agent
+            task_description = f"""
+            Develop a Java solution for: {title}
+            
+            Requirements: {description}
+            
+            Please provide:
+            1. Complete Java code with proper structure
+            2. Maven/Gradle configuration
+            3. JUnit tests
+            4. Documentation  
+            5. Usage examples
+            """
+        else:
+            agent = router_agent
+            task_description = f"""
+            Analyze and provide a solution for: {title}
+            
+            Requirements: {description}
+            
+            Please:
+            1. Determine the best technology approach
+            2. Create a complete solution
+            3. Include tests and documentation
+            4. Provide implementation guidance
+            """
+        
+        # Create and execute task
+        task = Task(
+            description=task_description,
+            agent=agent,
+            expected_output="Complete solution with code, tests, and documentation"
+        )
+        
+        # Create crew and execute
+        crew = Crew(
+            agents=[agent, qa_agent],
+            tasks=[task],
+            verbose=True
+        )
+        
+        result = crew.kickoff()
+        processing_time = time.time() - start_time
+        
+        # ENHANCED: Store the complete solution with organized file structure
+        solution_data = {
+            'content': str(result),
+            'language': detected_info['language'],
+            'domain': detected_info['domain'],
+            'title': title,
+            'description': description,
+            'agent': agent.role,
+            'processing_time': processing_time,
+            'tags': [
+                detected_info['language'].lower(), 
+                detected_info['domain'].lower().replace(' ', '_'), 
+                'ai-generated',
+                'crewai-solution'
+            ],
+            'complexity': determine_complexity(title, description),
+            'ticket_priority': getattr(ticket.fields, 'priority', {}).get('name', 'Medium') if hasattr(ticket.fields, 'priority') else 'Medium'
+        }
+        
+        # Store solution with organized file structure
+        print("💾 Storing solution...")
+        storage_result = code_storage.store_solution(ticket_key, solution_data)
         
         # Mark as successfully completed
         smart_processor.mark_processing_complete(
             ticket_key, 
-            result,
+            str(result),
             detected_info
         )
         
-        # Add comment to Jira ticket
-        if jira:
-            comment = f"""
+        # Enhanced JIRA comment with storage info and file links
+        comment = f"""
 ✅ **Automated Processing Complete**
 
-**Language Detected:** {detected_info['language']}
-**Domain:** {detected_info['domain']}
+**Solution Details:**
+- **Language Detected:** {detected_info['language']}
+- **Domain:** {detected_info['domain']}
+- **Processing Agent:** {agent.role}
+- **Processing Time:** {processing_time:.2f}s
 
-**Solution:**
-{result}
+**📁 Solution Storage:**
+- **Solution ID:** `{storage_result['solution_id']}`
+- **Files Generated:** {len(storage_result['files'])}
+- **Storage Path:** `{storage_result['storage_path']}`
+
+**📂 Generated Files:**
+"""
+        
+        # Add file list to comment
+        for file_type, file_path in storage_result['files'].items():
+            filename = os.path.basename(file_path)
+            comment += f"- **{filename}** - {get_file_type_description(filename)}\n"
+        
+        comment += f"""
+
+**🔍 Quick Access Commands:**
+```bash
+# View all files
+ls -la "{storage_result['storage_path']}"
+
+# View main solution
+cat "{storage_result['storage_path']}/solution.*"
+
+# View README
+cat "{storage_result['storage_path']}/README.md"
+```
+
+**🔎 Search & Reuse:**
+- Search similar solutions: `python manage_solutions.py search --language {detected_info['language']}`
+- View solution details: `python manage_solutions.py get {storage_result['solution_id']}`
+
+**Solution Preview:**
+```
+{str(result)[:800]}{'...' if len(str(result)) > 800 else ''}
+```
 
 ---
-*Processed by Enhanced Pipeline*
-            """
-            
-            jira.add_comment(ticket, comment)
-            print(f"✅ Added comment to {ticket_key}")
+*Processed by Enhanced CrewAI Pipeline with Comprehensive Storage*
+*Reusable components available in organized file structure*
+        """
         
-        return {"success": True, "ticket": ticket_key, "result": result}
+        jira.add_comment(ticket, comment)
+        
+        # Transition ticket to done (adjust status as needed)
+        try:
+            transitions = jira.transitions(ticket)
+            done_transition = next((t for t in transitions if 'done' in t['name'].lower()), None)
+            if done_transition:
+                jira.transition_issue(ticket, done_transition['id'])
+                print(f"✅ Transitioned {ticket_key} to Done")
+        except Exception as e:
+            print(f"⚠️  Could not transition {ticket_key}: {e}")
+        
+        print(f"✅ Solution stored with ID: {storage_result['solution_id']}")
+        print(f"📁 Files created: {len(storage_result['files'])}")
+        print(f"🔗 Access path: {storage_result['storage_path']}")
+        
+        return {
+            "success": True, 
+            "ticket": ticket_key, 
+            "result": str(result),
+            "storage": storage_result,
+            "processing_time": processing_time
+        }
         
     except Exception as e:
         # Mark as failed (will be retried later)
@@ -174,70 +327,66 @@ def process_single_ticket(ticket):
         print(f"❌ Error processing {ticket_key}: {e}")
         return {"success": False, "ticket": ticket_key, "error": str(e)}
 
-def main_processing_loop():
-    """Enhanced main loop with comprehensive statistics"""
-    cycle_count = 0
+def determine_complexity(title, description):
+    """Determine solution complexity based on requirements"""
+    text = (title + " " + description).lower()
     
-    print("🚀 Starting Enhanced Pipeline with Comprehensive Tracking")
-    print("=" * 70)
+    # High complexity indicators
+    high_indicators = [
+        'microservices', 'distributed', 'scalable', 'enterprise',
+        'machine learning', 'ai', 'real-time', 'high-performance',
+        'multi-tenant', 'blockchain', 'kubernetes'
+    ]
     
-    while True:
-        try:
-            cycle_count += 1
-            print(f"\n🔄 Processing Cycle #{cycle_count} - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
-            
-            # Get pending tickets using enhanced detection
-            pending_tickets = get_pending_tickets()
-            
-            if not pending_tickets:
-                print("✅ No tickets to process")
-            else:
-                print(f"📋 Found {len(pending_tickets)} tickets to process")
-                
-                # Process each ticket
-                results = []
-                for ticket in pending_tickets:
-                    result = process_single_ticket(ticket)
-                    results.append(result)
-                    time.sleep(2)  # Prevent API rate limiting
-                
-                # Generate processing summary
-                successful = [r for r in results if r['success']]
-                failed = [r for r in results if not r['success']]
-                
-                print(f"\n📊 Cycle Results:")
-                print(f"   ✅ Successful: {len(successful)}")
-                print(f"   ❌ Failed: {len(failed)}")
-                
-                if failed:
-                    print("   Failed tickets:")
-                    for f in failed:
-                        print(f"      - {f['ticket']}: {f['error']}")
-            
-            # Get and display comprehensive statistics
-            stats = enhanced_tracker.get_statistics()
-            print(f"\n📈 Pipeline Statistics:")
-            print(f"   Total tracked: {stats['total_tickets']}")
-            print(f"   Completed: {stats['completed']}")
-            print(f"   Failed: {stats['failed']}")
-            print(f"   Retry candidates: {stats['retry_candidates']}")
-            
-            if stats['by_language']:
-                print(f"   By language: {dict(stats['by_language'])}")
-            
-            # Check for retry candidates
-            if stats['retry_candidates'] > 0:
-                print(f"⚠️  {stats['retry_candidates']} tickets ready for retry")
-            
-            print(f"\n⏳ Waiting {POLL_INTERVAL} seconds before next cycle...")
-            time.sleep(POLL_INTERVAL)
-            
-        except KeyboardInterrupt:
-            print("\n🛑 Pipeline stopped by user")
-            break
-        except Exception as e:
-            print(f"❌ Error in main loop: {e}")
-            time.sleep(30)  # Wait before retrying
+    # Low complexity indicators
+    low_indicators = [
+        'simple', 'basic', 'small', 'quick', 'single',
+        'utility', 'helper', 'convert', 'format'
+    ]
+    
+    if any(indicator in text for indicator in high_indicators):
+        return 'high'
+    elif any(indicator in text for indicator in low_indicators):
+        return 'low'
+    else:
+        return 'medium'
+
+def get_file_type_description(filename):
+    """Get human-readable description for file types"""
+    descriptions = {
+        'solution.py': 'Main Python implementation',
+        'solution.js': 'Main JavaScript implementation', 
+        'solution.java': 'Main Java implementation',
+        'test_': 'Unit tests',
+        'requirements.txt': 'Python dependencies',
+        'package.json': 'Node.js dependencies and configuration',
+        'pom.xml': 'Maven project configuration',
+        'Dockerfile': 'Docker containerization setup',
+        'README.md': 'Documentation and usage guide',
+        'metadata.json': 'Solution metadata and analytics',
+        '.env.example': 'Environment variables template',
+        'config.': 'Configuration file'
+    }
+    
+    for pattern, description in descriptions.items():
+        if pattern in filename:
+            return description
+    
+    # Default descriptions by extension
+    ext = os.path.splitext(filename)[1].lower()
+    ext_descriptions = {
+        '.py': 'Python code',
+        '.js': 'JavaScript code',
+        '.java': 'Java code', 
+        '.html': 'HTML template',
+        '.css': 'Stylesheet',
+        '.sql': 'Database script',
+        '.json': 'Configuration data',
+        '.yaml': 'Configuration file',
+        '.md': 'Documentation'
+    }
+    
+    return ext_descriptions.get(ext, 'Generated file')
 
 def show_pipeline_status():
     """Show current pipeline status"""
