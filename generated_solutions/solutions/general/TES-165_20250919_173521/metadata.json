@@ -1,0 +1,22 @@
+{
+  "ticket_key": "TES-165",
+  "solution_id": "TES-165_20250919_173521",
+  "created_at": "2025-09-19T17:35:21.076867",
+  "language": "general",
+  "domain": "devops",
+  "title": "Build DevOps CI/CD pipeline with Docker and Kubernetes",
+  "description": "Create a complete CI/CD pipeline for microservices deployment.\n\nRequirements:\n- Multi-stage Docker builds for optimization\n- Kubernetes deployment manifests\n- Automated testing integration\n- Security scanning (container and code)\n- Rolling deployment strategy\n- Monitoring and alerting setup\n- Infrastructure as Code with Terraform\n\nPipeline stages:\n1. Code quality checks (linting, security scan)\n2. Unit and integration tests\n3. Docker image build and push\n4. Kubernetes deployment to staging\n5. Automated acceptance tests\n6. Production deployment approval\n7. Health checks and rollback capability\n\nTools: GitHub Actions, Docker, Kubernetes, Terraform, Helm",
+  "agent_used": "Technical Router & Project Manager",
+  "processing_time": 1.621246337890625e-05,
+  "content_hash": "af6c443801a710f944e76f48e752298a",
+  "tags": [
+    "general",
+    "devops",
+    "ai-generated",
+    "crewai-solution"
+  ],
+  "complexity": "high",
+  "status": "stored",
+  "reusable_components": [],
+  "dependencies": []
+}

@@ -1,0 +1,80 @@
+{
+  "solutions": {
+    "TES-153_20250919_173506": {
+      "ticket_key": "TES-153",
+      "title": "Build React dashboard component with Material-UI",
+      "language": "javascript",
+      "domain": "testing",
+      "created_at": "2025-09-19T17:35:06.676722",
+      "tags": [
+        "javascript",
+        "testing",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 6,
+      "reusable": false
+    },
+    "TES-168_20250919_173510": {
+      "ticket_key": "TES-168",
+      "title": "Build React dashboard component with Material-UI",
+      "language": "javascript",
+      "domain": "data_science",
+      "created_at": "2025-09-19T17:35:10.774223",
+      "tags": [
+        "javascript",
+        "data_science",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 6,
+      "reusable": false
+    },
+    "TES-167_20250919_173514": {
+      "ticket_key": "TES-167",
+      "title": "Security audit and vulnerability assessment tool",
+      "language": "python",
+      "domain": "security",
+      "created_at": "2025-09-19T17:35:14.329549",
+      "tags": [
+        "python",
+        "security",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 7,
+      "reusable": true
+    },
+    "TES-166_20250919_173517": {
+      "ticket_key": "TES-166",
+      "title": "Implement mobile authentication with React Native",
+      "language": "javascript",
+      "domain": "mobile_development",
+      "created_at": "2025-09-19T17:35:17.781226",
+      "tags": [
+        "javascript",
+        "mobile_development",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 6,
+      "reusable": false
+    },
+    "TES-165_20250919_173521": {
+      "ticket_key": "TES-165",
+      "title": "Build DevOps CI/CD pipeline with Docker and Kubernetes",
+      "language": "general",
+      "domain": "devops",
+      "created_at": "2025-09-19T17:35:21.077352",
+      "tags": [
+        "general",
+        "devops",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    }
+  },
+  "last_updated": "2025-09-19T17:35:21.077381"
+}

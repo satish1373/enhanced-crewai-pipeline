@@ -1,0 +1,28 @@
+{
+  "ticket_key": "TES-167",
+  "solution_id": "TES-167_20250919_173514",
+  "created_at": "2025-09-19T17:35:14.329016",
+  "language": "python",
+  "domain": "security",
+  "title": "Security audit and vulnerability assessment tool",
+  "description": "Create a comprehensive security assessment tool for web applications.\n\nRequirements:\n- Automated vulnerability scanning (OWASP Top 10)\n- Code analysis for security issues\n- Dependencies vulnerability check\n- SSL/TLS configuration assessment\n- Authentication and authorization testing\n- Generate detailed security reports\n- Integration with CI/CD pipelines\n\nSecurity checks:\n- SQL injection detection\n- XSS vulnerability scanning\n- CSRF protection verification\n- Insecure direct object references\n- Security misconfiguration detection\n- Sensitive data exposure checks\n- Insufficient logging and monitoring\n\nDeliverables:\n- Python-based scanning tool\n- HTML/PDF report generation\n- JSON API for CI/CD integration\n- Docker container for easy deployment\n- Comprehensive documentation",
+  "agent_used": "Senior Python Developer",
+  "processing_time": 4.887580871582031e-05,
+  "content_hash": "ff0c57e0d33458c56e7a3efadef3d6d7",
+  "tags": [
+    "python",
+    "security",
+    "ai-generated",
+    "crewai-solution"
+  ],
+  "complexity": "high",
+  "status": "stored",
+  "reusable_components": [
+    "validators"
+  ],
+  "dependencies": [
+    "python:unittest",
+    "python:main",
+    "python:Solution"
+  ]
+}

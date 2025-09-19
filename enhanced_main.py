@@ -675,7 +675,8 @@ def process_single_ticket(ticket):
                 'crewai-solution'
             ],
             'complexity': determine_complexity(title, description),
-            'ticket_priority': getattr(ticket.fields, 'priority', {}).get('name', 'Medium') if hasattr(ticket.fields, 'priority') else 'Medium'
+            'ticket_priority': ticket.fields.priority.name if hasattr(ticket.fields, 'priority') and ticket.fields.priority else 'Medium'
+            #'ticket_priority': getattr(ticket.fields, 'priority', {}).get('name', 'Medium') if hasattr(ticket.fields, 'priority') else 'Medium'
         }
         
         # Store solution with organized file structure

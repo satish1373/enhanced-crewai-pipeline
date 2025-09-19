@@ -1,0 +1,24 @@
+{
+  "ticket_key": "TES-166",
+  "solution_id": "TES-166_20250919_173517",
+  "created_at": "2025-09-19T17:35:17.780714",
+  "language": "javascript",
+  "domain": "mobile_development",
+  "title": "Implement mobile authentication with React Native",
+  "description": "Develop a secure authentication system for mobile app using React Native.\n\nRequirements:\n- Email/password and social login (Google, Apple)\n- Biometric authentication (fingerprint, face ID)\n- JWT token management with refresh\n- Secure storage for sensitive data\n- Offline capability with data sync\n- Cross-platform compatibility (iOS and Android)\n- Comprehensive testing with Detox\n\nSecurity features:\n- Certificate pinning for API calls\n- Encrypted local storage\n- Session timeout handling\n- Jailbreak/root detection\n- OWASP Mobile security compliance\n\nUI/UX requirements:\n- Native look and feel per platform\n- Accessibility support\n- Loading states and error handling\n- Smooth animations and transitions",
+  "agent_used": "Senior JavaScript Developer",
+  "processing_time": 1.33514404296875e-05,
+  "content_hash": "46796515032738151d998cdab1e854b4",
+  "tags": [
+    "javascript",
+    "mobile_development",
+    "ai-generated",
+    "crewai-solution"
+  ],
+  "complexity": "high",
+  "status": "stored",
+  "reusable_components": [],
+  "dependencies": [
+    "javascript:express"
+  ]
+}
