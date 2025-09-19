@@ -1,0 +1,26 @@
+{
+  "ticket_key": "TES-154",
+  "solution_id": "TES-154_20250919_173557",
+  "created_at": "2025-09-19T17:35:57.598718",
+  "language": "java",
+  "domain": "web_development",
+  "title": "Implement Java Spring Boot REST API for user management",
+  "description": "Create a comprehensive user management REST API using Spring Boot.\n\nRequirements:\n- Full CRUD operations for user entities\n- JWT-based authentication and authorization\n- Role-based access control (Admin, User)\n- Input validation and error handling\n- PostgreSQL database integration with JPA\n- OpenAPI/Swagger documentation\n- Comprehensive unit and integration tests\n\nEndpoints needed:\n- POST /api/users (create user)\n- GET /api/users (list users with pagination)\n- GET /api/users/{id} (get user details)\n- PUT /api/users/{id} (update user)\n- DELETE /api/users/{id} (delete user)\n- POST /api/auth/login (authenticate user)",
+  "agent_used": "Senior Java Developer",
+  "processing_time": 1.811981201171875e-05,
+  "content_hash": "9d35615cccf3e772486c1c6ada677d8f",
+  "tags": [
+    "java",
+    "web_development",
+    "ai-generated",
+    "crewai-solution"
+  ],
+  "complexity": "high",
+  "status": "stored",
+  "reusable_components": [],
+  "dependencies": [
+    "python:org",
+    "python:static",
+    "python:java"
+  ]
+}

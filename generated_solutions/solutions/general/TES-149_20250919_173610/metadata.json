@@ -1,0 +1,22 @@
+{
+  "ticket_key": "TES-149",
+  "solution_id": "TES-149_20250919_173610",
+  "created_at": "2025-09-19T17:36:10.821593",
+  "language": "general",
+  "domain": "general",
+  "title": "codegen - change background color of home page to pink",
+  "description": "codegen - change background color to black\n\nh2. Summary\n\nThe task is to change the background color to black.\n\nh2. Context\n\nThis change is part of the code generation project.\n\nh2. Acceptance criteria\n\n* The home page background color should be changed to pink.\n\nh2. Other information\n\nN/A",
+  "agent_used": "Technical Router & Project Manager",
+  "processing_time": 3.0040740966796875e-05,
+  "content_hash": "af6c443801a710f944e76f48e752298a",
+  "tags": [
+    "general",
+    "general",
+    "ai-generated",
+    "crewai-solution"
+  ],
+  "complexity": "low",
+  "status": "stored",
+  "reusable_components": [],
+  "dependencies": []
+}

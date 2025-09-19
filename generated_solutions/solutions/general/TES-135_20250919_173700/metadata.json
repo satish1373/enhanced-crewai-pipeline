@@ -1,0 +1,22 @@
+{
+  "ticket_key": "TES-135",
+  "solution_id": "TES-135_20250919_173700",
+  "created_at": "2025-09-19T17:37:00.759052",
+  "language": "general",
+  "domain": "testing",
+  "title": "Discrepancy in GBP to AUD Conversion Rate",
+  "description": "**Issue Summary:**\nA discrepancy in the conversion rate from GBP to AUD was observed during testing.\n\n**Expected Result:** 1,800 AUD for 1000 GBP\n**Actual Result:** 1,750 AUD\n\n**Root Cause Analysis:** Potential issue with currency conversion logic or API data accuracy needs to be investigated.\n\n**Recommendations:**\n1. Review the currency conversion logic.\n2. Check for updates from the currency conversion API.",
+  "agent_used": "Technical Router & Project Manager",
+  "processing_time": 1.3828277587890625e-05,
+  "content_hash": "af6c443801a710f944e76f48e752298a",
+  "tags": [
+    "general",
+    "testing",
+    "ai-generated",
+    "crewai-solution"
+  ],
+  "complexity": "medium",
+  "status": "stored",
+  "reusable_components": [],
+  "dependencies": []
+}

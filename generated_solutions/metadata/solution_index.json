@@ -74,7 +74,472 @@
       ],
       "file_count": 4,
       "reusable": false
+    },
+    "TES-164_20250919_173524": {
+      "ticket_key": "TES-164",
+      "title": "Create Rust CLI tool for log analysis",
+      "language": "javascript",
+      "domain": "data_science",
+      "created_at": "2025-09-19T17:35:24.402316",
+      "tags": [
+        "javascript",
+        "data_science",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 6,
+      "reusable": false
+    },
+    "TES-163_20250919_173527": {
+      "ticket_key": "TES-163",
+      "title": "Develop Go microservice for notification handling",
+      "language": "general",
+      "domain": "database",
+      "created_at": "2025-09-19T17:35:27.674876",
+      "tags": [
+        "general",
+        "database",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-162_20250919_173530": {
+      "ticket_key": "TES-162",
+      "title": "Implement Java Spring Boot REST API for user management",
+      "language": "java",
+      "domain": "web_development",
+      "created_at": "2025-09-19T17:35:30.921124",
+      "tags": [
+        "java",
+        "web_development",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 6,
+      "reusable": false
+    },
+    "TES-161_20250919_173534": {
+      "ticket_key": "TES-161",
+      "title": "Build React dashboard component with Material-UI",
+      "language": "javascript",
+      "domain": "testing",
+      "created_at": "2025-09-19T17:35:34.203080",
+      "tags": [
+        "javascript",
+        "testing",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 6,
+      "reusable": false
+    },
+    "TES-160_20250919_173537": {
+      "ticket_key": "TES-160",
+      "title": "Create Python data analysis function with pandas",
+      "language": "python",
+      "domain": "testing",
+      "created_at": "2025-09-19T17:35:37.649973",
+      "tags": [
+        "python",
+        "testing",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 7,
+      "reusable": true
+    },
+    "TES-159_20250919_173540": {
+      "ticket_key": "TES-159",
+      "title": "Security audit and vulnerability assessment tool",
+      "language": "python",
+      "domain": "security",
+      "created_at": "2025-09-19T17:35:40.868756",
+      "tags": [
+        "python",
+        "security",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 7,
+      "reusable": true
+    },
+    "TES-158_20250919_173544": {
+      "ticket_key": "TES-158",
+      "title": "Implement mobile authentication with React Native",
+      "language": "javascript",
+      "domain": "mobile_development",
+      "created_at": "2025-09-19T17:35:44.202895",
+      "tags": [
+        "javascript",
+        "mobile_development",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 6,
+      "reusable": false
+    },
+    "TES-157_20250919_173547": {
+      "ticket_key": "TES-157",
+      "title": "Build DevOps CI/CD pipeline with Docker and Kubernetes",
+      "language": "general",
+      "domain": "devops",
+      "created_at": "2025-09-19T17:35:47.505699",
+      "tags": [
+        "general",
+        "devops",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-156_20250919_173551": {
+      "ticket_key": "TES-156",
+      "title": "Create Rust CLI tool for log analysis",
+      "language": "javascript",
+      "domain": "data_science",
+      "created_at": "2025-09-19T17:35:51.002357",
+      "tags": [
+        "javascript",
+        "data_science",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 6,
+      "reusable": false
+    },
+    "TES-155_20250919_173554": {
+      "ticket_key": "TES-155",
+      "title": "Develop Go microservice for notification handling",
+      "language": "general",
+      "domain": "database",
+      "created_at": "2025-09-19T17:35:54.296255",
+      "tags": [
+        "general",
+        "database",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-154_20250919_173557": {
+      "ticket_key": "TES-154",
+      "title": "Implement Java Spring Boot REST API for user management",
+      "language": "java",
+      "domain": "web_development",
+      "created_at": "2025-09-19T17:35:57.599298",
+      "tags": [
+        "java",
+        "web_development",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 6,
+      "reusable": false
+    },
+    "TES-152_20250919_173600": {
+      "ticket_key": "TES-152",
+      "title": "Create Python data analysis function with pandas",
+      "language": "python",
+      "domain": "testing",
+      "created_at": "2025-09-19T17:36:00.755734",
+      "tags": [
+        "python",
+        "testing",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 7,
+      "reusable": true
+    },
+    "TES-151_20250919_173603": {
+      "ticket_key": "TES-151",
+      "title": "Create Python function for calculating factorial",
+      "language": "python",
+      "domain": "general",
+      "created_at": "2025-09-19T17:36:03.989000",
+      "tags": [
+        "python",
+        "general",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 7,
+      "reusable": true
+    },
+    "TES-150_20250919_173607": {
+      "ticket_key": "TES-150",
+      "title": "Test Execution Results for Coin Swap Buddy",
+      "language": "general",
+      "domain": "web_development",
+      "created_at": "2025-09-19T17:36:07.216418",
+      "tags": [
+        "general",
+        "web_development",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-149_20250919_173610": {
+      "ticket_key": "TES-149",
+      "title": "codegen - change background color of home page to pink",
+      "language": "general",
+      "domain": "general",
+      "created_at": "2025-09-19T17:36:10.822207",
+      "tags": [
+        "general",
+        "general",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-147_20250919_173614": {
+      "ticket_key": "TES-147",
+      "title": "change the currency converter app's background color from blue to pink",
+      "language": "general",
+      "domain": "general",
+      "created_at": "2025-09-19T17:36:14.097893",
+      "tags": [
+        "general",
+        "general",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-148_20250919_173617": {
+      "ticket_key": "TES-148",
+      "title": "Add light blue background to the home page",
+      "language": "general",
+      "domain": "general",
+      "created_at": "2025-09-19T17:36:17.276827",
+      "tags": [
+        "general",
+        "general",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-146_20250919_173620": {
+      "ticket_key": "TES-146",
+      "title": "ADD Japanese yen JPY to the currencies list",
+      "language": "csharp",
+      "domain": "ui_ux",
+      "created_at": "2025-09-19T17:36:20.656272",
+      "tags": [
+        "csharp",
+        "ui_ux",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-145_20250919_173624": {
+      "ticket_key": "TES-145",
+      "title": "Test Execution Results Report",
+      "language": "general",
+      "domain": "data_science",
+      "created_at": "2025-09-19T17:36:24.885213",
+      "tags": [
+        "general",
+        "data_science",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-142_20250919_173628": {
+      "ticket_key": "TES-142",
+      "title": "Add Canadian dollar as the CAD to the lsit of currencies",
+      "language": "general",
+      "domain": "testing",
+      "created_at": "2025-09-19T17:36:28.232285",
+      "tags": [
+        "general",
+        "testing",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-144_20250919_173631": {
+      "ticket_key": "TES-144",
+      "title": "Currency Converter Access",
+      "language": "general",
+      "domain": "testing",
+      "created_at": "2025-09-19T17:36:31.415833",
+      "tags": [
+        "general",
+        "testing",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-143_20250919_173634": {
+      "ticket_key": "TES-143",
+      "title": "Authentication Failure",
+      "language": "general",
+      "domain": "security",
+      "created_at": "2025-09-19T17:36:34.561185",
+      "tags": [
+        "general",
+        "security",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-141_20250919_173637": {
+      "ticket_key": "TES-141",
+      "title": "404 Error on Login Page",
+      "language": "general",
+      "domain": "testing",
+      "created_at": "2025-09-19T17:36:37.783231",
+      "tags": [
+        "general",
+        "testing",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-140_20250919_173640": {
+      "ticket_key": "TES-140",
+      "title": "Add SGD to the list of currencies",
+      "language": "general",
+      "domain": "general",
+      "created_at": "2025-09-19T17:36:40.919762",
+      "tags": [
+        "general",
+        "general",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-139_20250919_173643": {
+      "ticket_key": "TES-139",
+      "title": "Currency Converter Application Down",
+      "language": "general",
+      "domain": "testing",
+      "created_at": "2025-09-19T17:36:43.958489",
+      "tags": [
+        "general",
+        "testing",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-137_20250919_173647": {
+      "ticket_key": "TES-137",
+      "title": "Test Report Update for Currency Converter Application",
+      "language": "swift",
+      "domain": "devops",
+      "created_at": "2025-09-19T17:36:47.272208",
+      "tags": [
+        "swift",
+        "devops",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-138_20250919_173650": {
+      "ticket_key": "TES-138",
+      "title": "Application Down - Unable to Perform Tests",
+      "language": "general",
+      "domain": "testing",
+      "created_at": "2025-09-19T17:36:50.460632",
+      "tags": [
+        "general",
+        "testing",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-136_20250919_173654": {
+      "ticket_key": "TES-136",
+      "title": "Update on test execution results for Coin-Swap-Buddy application",
+      "language": "swift",
+      "domain": "testing",
+      "created_at": "2025-09-19T17:36:54.060032",
+      "tags": [
+        "swift",
+        "testing",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-133_20250919_173657": {
+      "ticket_key": "TES-133",
+      "title": "Test Results Update for Coin-Swap-Buddy Application",
+      "language": "swift",
+      "domain": "web_development",
+      "created_at": "2025-09-19T17:36:57.522059",
+      "tags": [
+        "swift",
+        "web_development",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-135_20250919_173700": {
+      "ticket_key": "TES-135",
+      "title": "Discrepancy in GBP to AUD Conversion Rate",
+      "language": "general",
+      "domain": "testing",
+      "created_at": "2025-09-19T17:37:00.759447",
+      "tags": [
+        "general",
+        "testing",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
+    },
+    "TES-132_20250919_173704": {
+      "ticket_key": "TES-132",
+      "title": "Add INR to the list of currencies",
+      "language": "general",
+      "domain": "web_development",
+      "created_at": "2025-09-19T17:37:04.050098",
+      "tags": [
+        "general",
+        "web_development",
+        "ai-generated",
+        "crewai-solution"
+      ],
+      "file_count": 4,
+      "reusable": false
     }
   },
-  "last_updated": "2025-09-19T17:35:21.077381"
+  "last_updated": "2025-09-19T17:37:04.050121"
 }

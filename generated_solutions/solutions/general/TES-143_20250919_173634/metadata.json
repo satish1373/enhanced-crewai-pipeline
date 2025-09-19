@@ -1,0 +1,22 @@
+{
+  "ticket_key": "TES-143",
+  "solution_id": "TES-143_20250919_173634",
+  "created_at": "2025-09-19T17:36:34.560564",
+  "language": "general",
+  "domain": "security",
+  "title": "Authentication Failure",
+  "description": "Unable to authenticate due to a 404 error on the login page. The application does not allow user authentication, leading to failed test execution.",
+  "agent_used": "Technical Router & Project Manager",
+  "processing_time": 1.4066696166992188e-05,
+  "content_hash": "af6c443801a710f944e76f48e752298a",
+  "tags": [
+    "general",
+    "security",
+    "ai-generated",
+    "crewai-solution"
+  ],
+  "complexity": "high",
+  "status": "stored",
+  "reusable_components": [],
+  "dependencies": []
+}

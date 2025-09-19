@@ -1,0 +1,8 @@
+project/
+├── src/
+│   ├── main/           # Main application code
+│   ├── utils/          # Utility functions
+│   └── config/         # Configuration files
+├── tests/              # Test files
+├── docs/               # Documentation
+└── README.md          # Project overview

@@ -1,0 +1,28 @@
+{
+  "ticket_key": "TES-152",
+  "solution_id": "TES-152_20250919_173600",
+  "created_at": "2025-09-19T17:36:00.754784",
+  "language": "python",
+  "domain": "testing",
+  "title": "Create Python data analysis function with pandas",
+  "description": "Create a Python function that analyzes customer purchase data using pandas.\n\nRequirements:\n- Read CSV data with customer purchases\n- Calculate monthly revenue trends\n- Identify top 10 customers by total purchase amount\n- Export results to Excel format\n- Include proper error handling for missing data\n- Add comprehensive unit tests with pytest\n\nExpected deliverables:\n- Python module with analysis functions\n- Unit tests with >90% coverage\n- Documentation with usage examples\n- Sample data processing script",
+  "agent_used": "Senior Python Developer",
+  "processing_time": 1.8835067749023438e-05,
+  "content_hash": "ff0c57e0d33458c56e7a3efadef3d6d7",
+  "tags": [
+    "python",
+    "testing",
+    "ai-generated",
+    "crewai-solution"
+  ],
+  "complexity": "low",
+  "status": "stored",
+  "reusable_components": [
+    "validators"
+  ],
+  "dependencies": [
+    "python:unittest",
+    "python:main",
+    "python:Solution"
+  ]
+}

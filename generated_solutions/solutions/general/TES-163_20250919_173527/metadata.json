@@ -1,0 +1,22 @@
+{
+  "ticket_key": "TES-163",
+  "solution_id": "TES-163_20250919_173527",
+  "created_at": "2025-09-19T17:35:27.674262",
+  "language": "general",
+  "domain": "database",
+  "title": "Develop Go microservice for notification handling",
+  "description": "Build a high-performance notification microservice using Go.\n\nRequirements:\n- Handle multiple notification channels (email, SMS, push)\n- Implement message queuing with Redis\n- Add rate limiting and retry mechanisms\n- Include health checks and metrics endpoints\n- Docker containerization\n- Concurrent processing with goroutines\n- Comprehensive testing with testify\n\nTechnical specifications:\n- Use Gin framework for HTTP server\n- Redis for message queuing and caching\n- MongoDB for notification history\n- Prometheus metrics integration\n- Circuit breaker pattern for external services",
+  "agent_used": "Technical Router & Project Manager",
+  "processing_time": 1.9073486328125e-05,
+  "content_hash": "af6c443801a710f944e76f48e752298a",
+  "tags": [
+    "general",
+    "database",
+    "ai-generated",
+    "crewai-solution"
+  ],
+  "complexity": "high",
+  "status": "stored",
+  "reusable_components": [],
+  "dependencies": []
+}

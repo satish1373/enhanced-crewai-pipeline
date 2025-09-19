@@ -1,0 +1,28 @@
+{
+  "ticket_key": "TES-151",
+  "solution_id": "TES-151_20250919_173603",
+  "created_at": "2025-09-19T17:36:03.988383",
+  "language": "python",
+  "domain": "general",
+  "title": "Create Python function for calculating factorial",
+  "description": "Create Python function for calculating factorial",
+  "agent_used": "Senior Python Developer",
+  "processing_time": 1.239776611328125e-05,
+  "content_hash": "ff0c57e0d33458c56e7a3efadef3d6d7",
+  "tags": [
+    "python",
+    "general",
+    "ai-generated",
+    "crewai-solution"
+  ],
+  "complexity": "medium",
+  "status": "stored",
+  "reusable_components": [
+    "validators"
+  ],
+  "dependencies": [
+    "python:unittest",
+    "python:main",
+    "python:Solution"
+  ]
+}
